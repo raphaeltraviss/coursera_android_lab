@@ -22,38 +22,43 @@ public class ActivityOne extends Activity {
 
 	// Lifecycle counters
 
-	int mCreate;
-	int mRestart;
-	int mStart;
-	int mResume;
+	// TODO:
+	// Create variables named
+	// mCreate, mRestart, mStart and mResume
+	// to count calls to onCreate(), onRestart(), onStart() and
+	// onResume(). These variables should not be defined as static.
 
 	// You will need to increment these variables' values when their
 	// corresponding lifecycle methods get called.
 
-	TextView mTvCreate;
-	TextView mTvRestart;
-	TextView mTvStart;
-	TextView mTvResume;
+	// TODO: Create variables for each of the TextViews
+	// named mTvCreate, mTvRestart, mTvStart, mTvResume.
+	// for displaying the current count of each counter variable
 
 	@Override
 	protected void onCreate(Bundle savedInstanceState) {
 		super.onCreate(savedInstanceState);
-		setContentView(course.labs.activitylab.R.layout.activity_one);
+		setContentView(R.layout.activity_one);
 
-		mTvCreate = (TextView) findViewById(R.id.create);
-		mTvRestart = (TextView) findViewById(R.id.restart);
-		mTvStart = (TextView) findViewById(R.id.start);
-		mTvResume = (TextView) findViewById(R.id.resume);
+		// TODO: Assign the appropriate TextViews to the TextView variables
+		// Hint: Access the TextView by calling Activity's findViewById()
+		// textView1 = (TextView) findViewById(R.id.textView1);
 
 		Button launchActivityTwoButton = (Button) findViewById(R.id.bLaunchActivityTwo);
-
 		launchActivityTwoButton.setOnClickListener(new OnClickListener() {
+
 			@Override
 			public void onClick(View v) {
-				Intent startTwo = new Intent(
-						ActivityOne.this, ActivityTwo.class
-				);
-				launchActivityTwoButton.getContext().startActivity(startTwo);
+				// TODO:
+				// Launch Activity Two
+				// Hint: use Context's startActivity() method
+
+				// Create an intent stating which Activity you would like to
+				// start
+				Intent intent = null;
+
+				// Launch the Activity using the intent
+
 			}
 		});
 
