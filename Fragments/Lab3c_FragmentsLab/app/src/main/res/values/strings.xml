@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">FragmentsLab</string>
+    <string name="greeting">Select a feed to view!</string>
 </resources>
