@@ -2,12 +2,45 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="course.labs.dangerousapp">
 
+    <uses-sdk
+        android:minSdkVersion="13"
+        android:targetSdkVersion="18" />
+
+    <!--
+          TODO - Using a permission element,
+          define a custom permission with name
+    		  "course.labs.permissions.DANGEROUS_ACTIVITY_PERM"
+          and "dangerous" protection level.
+    -->
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.DangerousApp" />
+        android:theme="@style/Theme.DangerousApp">
+
+        <!-- TODO - enforce the custom permission on this Activity -->
+
+        <activity
+            android:name=".DangerousActivity"
+            android:label="@string/app_name"
+            android:exported="true">
+
+            <!--
+                 TODO - add additional intent filter info so that this Activity
+                  will respond to an Implicit Intent with the action
+                  "course.labs.permissions.DANGEROUS_ACTIVITY"
+            -->
+
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+    </application>
 
 </manifest>

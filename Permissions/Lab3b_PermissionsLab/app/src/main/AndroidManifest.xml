@@ -2,12 +2,36 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="course.labs.permissionslab">
 
+    <!--  TODO - add uses-permission elements -->
+
     <application
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
-        android:roundIcon="@mipmap/ic_launcher_round"
-        android:supportsRtl="true"
-        android:theme="@style/Theme.PermissionsLab" />
+        android:theme="@style/AppTheme" >
+
+        <activity
+            android:name=".ActivityLoaderActivity"
+            android:label="@string/title_main"
+            android:exported="true" >
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+
+        <activity
+            android:name=".BookmarksActivity"
+            android:label="@string/title_permissions"
+            android:exported="true">
+        </activity>
+
+        <activity
+            android:name=".GoToDangerousActivity"
+            android:label="@string/title_activity_customization"
+            android:exported="true">
+        </activity>
+    </application>
 
 </manifest>

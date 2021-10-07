@@ -1,3 +1,4 @@
 <resources>
     <string name="app_name">Dangerous App</string>
+    <string name="hello_world">You have opened a dangerous activity</string>
 </resources>
