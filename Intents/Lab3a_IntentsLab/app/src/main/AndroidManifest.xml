@@ -8,6 +8,17 @@
         android:label="@string/app_name"
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
-        android:theme="@style/Theme.Lab3a_IntentsLab" />
+        android:theme="@style/Theme.Lab3a_IntentsLab">
+        <activity
+            android:name=".ActivityLoaderActivity"
+            android:label="@string/title_main"
+            android:exported="false">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+    </application>
 
 </manifest>
